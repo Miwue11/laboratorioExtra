@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+  background-color: #eeeeee;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.toolbar {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  background-color: white;
+}
+.toolbar input {
+  width: 220px;
+  padding: 8px 10px;
+  border: 1px solid #cccccc;
+}
+
+.page-title {
+  padding: 20px 32px;
+  background-color: #cae459;
+  color: white;
+  font-size: 24px;
+}
+
+.page-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+}
+
+nav {
+  position: sticky;
+  top: 117px;
+  align-self: start;
+  height: calc(100vh - 117px);
+  background-color: #393e06;
+}
+
+.menu-title {
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 14px 18px;
+  background-color: #f4f7dc;
+  border-bottom: 1px solid #d8ddb4;
+  cursor: pointer;
+}
+li:hover {
+  background-color: #e1e9a8;
+}
+
+main {
+  padding: 32px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  background-color: white;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+.card img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+
+.member-name {
+  font-size: 16px;
+}
+
+footer {
+  padding: 16px 32px;
+  background-color: #f4f7dc;
+  color: #222222;
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    display: none;
+  }
+  .page-title {
+    padding: 18px 20px;
+    font-size: 22px;
+  }
+  .page-container {
+    display: block;
+  }
+  nav {
+    position: sticky;
+    top: 62px;
+    z-index: 15;
+    height: auto;
+  }
+  .menu-title {
+    display: none;
+  }
+  ul {
+    display: flex;
+  }
+  li {
+    flex: 1;
+    text-align: center;
+    border-bottom: 0;
+    border-right: 1px solid #d8ddb4;
+  }
+  main {
+    padding: 20px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card {
+    min-height: auto;
+    justify-content: flex-start;
+  }
+  footer {
+    padding: 16px 20px;
+  }
+}
+
+/*# sourceMappingURL=/styles.164d45a1.css.map */
